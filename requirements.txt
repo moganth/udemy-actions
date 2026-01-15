@@ -11,3 +11,6 @@ pymongo
 motor
 python-dotenv
 kubernetes
+pytest 
+pytest-mock
+httpx

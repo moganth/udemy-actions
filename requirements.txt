@@ -4,7 +4,8 @@ pydantic
 docker
 python-multipart
 python-jose[cryptography]
-passlib[bcrypt]
+passlib==1.7.4
+bcrypt==3.2.2
 slowapi
 pymongo
 motor

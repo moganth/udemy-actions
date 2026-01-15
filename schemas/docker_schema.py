@@ -1,5 +1,10 @@
+import os
+from dotenv import load_dotenv
+
 from pydantic import BaseModel
 from typing import Optional, Dict
+
+load_dotenv()
 
 class ImageSchema(BaseModel):
     image_name: str
@@ -20,12 +25,12 @@ class ContainerSchema(BaseModel):
     container_name: str
 
 class DockerLoginSchema(BaseModel):
-    username: str = "moganthkumar"
-    password: str = "7010690656@Mk"
+    username: str = os.getenv("USER_NAME")
+    password: str = os.getenv("PASSWORD")
 
 class DockerImageSchema(BaseModel):
     image_name: str
-    repository_name: str = "moganthkumar/moganth" # Docker Hub repository name (e.g., username/repository)
+    repository_name: str = os.getenv("REPOSITORY_NAME") # Docker Hub repository name (e.g., username/repository)
 
 class BuildImagePayload(BaseModel):
     image_name: str
@@ -34,9 +39,9 @@ class BuildImagePayload(BaseModel):
 
 class PushImagePayload(BaseModel):
     local_image_name: str
-    repository_name: str = "moganthkumar/moganth"
-    username: str = "moganthkumar"
-    password: str = "7010690656@Mk"
+    repository_name: str = os.getenv("REPOSITORY_NAME")
+    username: str = os.getenv("USER_NAME")
+    password: str = os.getenv("PASSWORD")
 
 class PullImagePayload(BaseModel):
     image_name: str

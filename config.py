@@ -14,3 +14,6 @@ DB_NAME = os.getenv("DB_NAME")
 
 LOG_FILE = "DMS_V2.log"
 LOG_DIR = "logs"
+
+# USER_NAME = os.getenv("USER_NAME")
+# PASSWORD = os.getenv("PASSWORD")

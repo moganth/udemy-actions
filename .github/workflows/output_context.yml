@@ -1,0 +1,8 @@
+name: Github expression and context output example
+on: workflow_dispatch
+jobs:
+  output-context:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Output Github context using expression
+        run: echo "${{ github }}"

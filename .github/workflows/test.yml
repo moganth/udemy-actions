@@ -37,9 +37,9 @@ jobs:
       - name: Dummy deploy step
         run: echo "Deploy step would go here."
 
-  dummy-deploy-sequential:
-    needs: test
-    runs-on: ubuntu-latest
-    steps:
-      - name: Dummy deploy step
-        run: echo "Deploy step would go here."
+#   dummy-deploy-sequential:
+#     needs: test
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Dummy deploy step
+#         run: echo "Deploy step would go here."

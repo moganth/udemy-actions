@@ -2,11 +2,10 @@ name: Test Workflow
 on: push
 jobs:
   test:
-    runs-on: ubuntu:latest
+    runs-on: ubuntu-latest
     steps:
       - name: Get code into the runner machine (checkout repository)
         uses: actions/checkout@v3
-        run: echo "checked out code"
 
       - name: Check Docker deamon
         run: docker info
